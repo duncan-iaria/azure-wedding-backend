@@ -1,13 +1,12 @@
 const guests = require('../data/Guests.seed.json');
 
 module.exports = function (context, req) {
-	context.log('JavaScript HTTP trigger function processed a request.');
-	context.log('Guests: ', guests);
+	context.log('All Guests endpoint was hit');
 
 	if (req.query.name || (req.body && req.body.name)) {
 		context.res = {
-			// status: 200, /* Defaults to 200 */
-			body: guests.guests
+			status: 200,
+			body: guests
 		};
 	}
 	else {

@@ -1,3 +1,7 @@
 {
     "name": "Azure"
 }
+
+NOTES: 
+sample like query
+db.guests.find({where: displayName = /je/}) //like jenny (like je)
