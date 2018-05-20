@@ -1,0 +1,22 @@
+{
+  "name": "azure-wedding-backend",
+  "version": "1.0.0",
+  "description": "Backend API for managing wedding guests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncan-iaria/azure-wedding-backend.git"
+  },
+  "author": "Duncan Iaria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duncan-iaria/azure-wedding-backend/issues"
+  },
+  "homepage": "https://github.com/duncan-iaria/azure-wedding-backend#readme",
+  "dependencies": {
+    "mongodb": "^3.1.0-beta4"
+  }
+}
