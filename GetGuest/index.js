@@ -4,11 +4,18 @@ module.exports = function(context, req) {
   context.log('Get Guest endpoint hit');
 
   const getGuest = tDb => {
-    context.log('query was:', tempQuery);
+    let multiSearch = tempQuery.split(' ');
+    multiSearch = multiSearch.map(tQuery => {
+      return new RegExp(tQuery, 'i');
+    });
+
+    context.log('multisearch = ', multiSearch);
+    context.log('tempquery = ', tempQuery);
     tempQuery = new RegExp(tempQuery, 'i');
     tDb
       .collection('guests')
-      .find({ names: { $regex: tempQuery } })
+      // .find({ names: { $regex: tempQuery } })
+      .find({ names: { $all: multiSearch } })
       .toArray((tError, tGuests) => {
         context.res = {
           status: 200,
