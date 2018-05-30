@@ -1,0 +1,54 @@
+[
+  {
+    "displayName": "Jenny & Ben Cunningham",
+    "names": [
+      "jenny",
+      "ben",
+      "cunningham",
+      "andrews"
+    ],
+    "isPlusOne": "false",
+    "isWeddingRsvp": "false",
+    "isWelcomeRsvp": "false",
+    "guestCount": 2
+  },
+  {
+    "displayName": "Eric Monachello & Cassandra Trissler",
+    "names": [
+      "eric",
+      "monachello",
+      "cassandra",
+      "trissler"
+    ],
+    "isPlusOne": "false",
+    "isWeddingRsvp": "false",
+    "isWelcomeRsvp": "false",
+    "guestCount": 2
+  },
+  {
+    "displayName": "Chris Hassebrook",
+    "names": [
+      "chris",
+      "hassebrook",
+      "nadia",
+      "aly",
+      "shitlord"
+    ],
+    "isPlusOne": "true",
+    "isPlusOneRSVP": "false",
+    "isWeddingRsvp": "false",
+    "isWelcomeRsvp": "false",
+    "guestCount": 1
+  },
+  {
+    "displayName": "Devin Smith",
+    "names": [
+      "devin",
+      "smith"
+    ],
+    "isPlusOne": "false",
+    "isWeddingRsvp": "false",
+    "isWelcomeRsvp": "false",
+    "guestCount": 1
+  }
+]
