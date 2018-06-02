@@ -2,34 +2,57 @@ const mongodb = require('mongodb');
 
 module.exports = function(context, req) {
   context.log('Get Guest endpoint hit');
+  let tempQuery = '';
+  let database;
+
+  const init = () => {
+    if (req.query.guestSearch || (req.body && req.body.guestSearch)) {
+      tempQuery = req.query.guestSearch || req.body.guestSearch;
+
+      if (tempQuery.includes('request')) {
+        sendResponse([], 'Please pass a valid search query', 400);
+      } else {
+        mongodb.MongoClient.connect(process.env.DB_URI, onDbConnect);
+      }
+    } else {
+      sendResponse([], 'Please pass a valid search query', 400);
+    }
+  };
+
+  const sendResponse = (tData, tError, tStatus) => {
+    context.res = {
+      status: tStatus || 200,
+      body: {
+        data: tData,
+        error: tError || null,
+      },
+    };
+    context.done();
+  };
 
   const getGuest = tDb => {
     let multiSearch = tempQuery.split(' ');
+
     if (multiSearch) {
       multiSearch = multiSearch.map(tQuery => {
-        return new RegExp(tQuery, 'i');
+        if (tQuery) {
+          return new RegExp(tQuery, 'i');
+        }
       });
 
-      context.log('multisearch = ', multiSearch);
-      context.log('tempquery = ', tempQuery);
       tempQuery = new RegExp(tempQuery, 'i');
       tDb
         .collection('guests')
-        // .find({ names: { $regex: tempQuery } })
         .find({ names: { $all: multiSearch } })
         .toArray((tError, tGuests) => {
-          context.res = {
-            status: 200,
-            body: tGuests,
-          };
-          context.done();
+          if (tError) {
+            sendResponse([], tError, 400);
+          } else {
+            sendResponse(tGuests, tError, 200);
+          }
         });
     } else {
-      context.res = {
-        status: 200,
-        body: [],
-      };
-      context.done();
+      sendResponse([], null, 200);
     }
   };
 
@@ -44,16 +67,6 @@ module.exports = function(context, req) {
     }
   };
 
-  let tempQuery = '';
-
-  if (req.query.guestSearch || (req.body && req.body.guestSearch)) {
-    tempQuery = req.query.guestSearch || req.body.guestSearch;
-    mongodb.MongoClient.connect(process.env.DB_URI, onDbConnect);
-  } else {
-    context.res = {
-      status: 400,
-      body: 'Please pass a valid search query',
-    };
-    context.done();
-  }
+  // FUNCTION EXECUTION
+  init();
 };
