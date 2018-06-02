@@ -1,6 +1,6 @@
 const mongodb = require('mongodb');
 
-module.exports = function(context, req) {
+module.exports = function (context, req) {
   context.log('Get Guest endpoint hit');
 
   const getGuest = tDb => {
@@ -18,6 +18,7 @@ module.exports = function(context, req) {
         // .find({ names: { $regex: tempQuery } })
         .find({ names: { $all: multiSearch } })
         .toArray((tError, tGuests) => {
+          context.log(tGuests);
           context.res = {
             status: 200,
             body: tGuests,
