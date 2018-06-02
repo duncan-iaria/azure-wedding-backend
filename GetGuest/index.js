@@ -5,24 +5,32 @@ module.exports = function(context, req) {
 
   const getGuest = tDb => {
     let multiSearch = tempQuery.split(' ');
-    multiSearch = multiSearch.map(tQuery => {
-      return new RegExp(tQuery, 'i');
-    });
-
-    context.log('multisearch = ', multiSearch);
-    context.log('tempquery = ', tempQuery);
-    tempQuery = new RegExp(tempQuery, 'i');
-    tDb
-      .collection('guests')
-      // .find({ names: { $regex: tempQuery } })
-      .find({ names: { $all: multiSearch } })
-      .toArray((tError, tGuests) => {
-        context.res = {
-          status: 200,
-          body: tGuests,
-        };
-        context.done();
+    if (multiSearch) {
+      multiSearch = multiSearch.map(tQuery => {
+        return new RegExp(tQuery, 'i');
       });
+
+      context.log('multisearch = ', multiSearch);
+      context.log('tempquery = ', tempQuery);
+      tempQuery = new RegExp(tempQuery, 'i');
+      tDb
+        .collection('guests')
+        // .find({ names: { $regex: tempQuery } })
+        .find({ names: { $all: multiSearch } })
+        .toArray((tError, tGuests) => {
+          context.res = {
+            status: 200,
+            body: tGuests,
+          };
+          context.done();
+        });
+    } else {
+      context.res = {
+        status: 200,
+        body: [],
+      };
+      context.done();
+    }
   };
 
   const onDbConnect = (tError, tClient) => {
