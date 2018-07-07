@@ -1,54 +1,42 @@
 [
   {
     "displayName": "Jenny & Ben Cunningham",
-    "names": [
-      "jenny",
-      "ben",
-      "cunningham",
-      "andrews"
-    ],
-    "isPlusOne": "false",
-    "isWeddingRsvp": "false",
-    "isWelcomeRsvp": "false",
-    "guestCount": 2
+    "names": ["jenny", "ben", "cunningham", "andrews"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingGuestCount": 0,
+    "maxGuestCount": 2,
+    "emailAddress": null
   },
   {
     "displayName": "Eric Monachello & Cassandra Trissler",
-    "names": [
-      "eric",
-      "monachello",
-      "cassandra",
-      "trissler"
-    ],
-    "isPlusOne": "false",
-    "isWeddingRsvp": "false",
-    "isWelcomeRsvp": "false",
-    "guestCount": 2
+    "names": ["eric", "monachello", "cassandra", "trissler"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingGuestCount": 0,
+    "maxGuestCount": 2,
+    "emailAddress": null
   },
   {
     "displayName": "Chris Hassebrook",
-    "names": [
-      "chris",
-      "hassebrook",
-      "nadia",
-      "aly",
-      "shitlord"
-    ],
-    "isPlusOne": "true",
-    "isPlusOneRSVP": "false",
-    "isWeddingRsvp": "false",
-    "isWelcomeRsvp": "false",
-    "guestCount": 1
+    "names": ["chris", "hassebrook", "nadia", "aly", "shitlord"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingGuestCount": 0,
+    "maxGuestCount": 1,
+    "emailAddress": null
   },
   {
     "displayName": "Devin Smith",
-    "names": [
-      "devin",
-      "smith"
-    ],
-    "isPlusOne": "false",
-    "isWeddingRsvp": "false",
-    "isWelcomeRsvp": "false",
-    "guestCount": 1
+    "names": ["devin", "smith"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingGuestCount": 0,
+    "maxGuestCount": 1,
+    "emailAddress": null
   }
 ]

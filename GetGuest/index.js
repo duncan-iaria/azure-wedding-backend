@@ -24,8 +24,6 @@ module.exports = function(context, req) {
   };
 
   const sendResponse = (tData, tError, tStatus) => {
-    console.log('\ndata:\n', tData);
-    console.log('\nerror:\n', tError);
     context.res = {
       status: tStatus || 200,
       headers: {
