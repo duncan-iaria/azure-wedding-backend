@@ -14,6 +14,7 @@ module.exports = function(context, req) {
       } else {
         mongodb.MongoClient.connect(
           process.env.DB_URI,
+          { useNewUrlParser: true },
           onDbConnect
         );
       }
@@ -25,6 +26,9 @@ module.exports = function(context, req) {
   const sendResponse = (tData, tError, tStatus) => {
     context.res = {
       status: tStatus || 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: {
         data: tData,
         error: tError || null,
@@ -51,7 +55,7 @@ module.exports = function(context, req) {
           if (tError) {
             sendResponse([], tError, 400);
           } else {
-            sendResponse(tGuests, tError, 200);
+            sendResponse(tGuests, null, 200);
           }
         });
     } else {
@@ -61,7 +65,7 @@ module.exports = function(context, req) {
 
   const onDbConnect = (tError, tClient) => {
     if (tError) {
-      context.log('error: ', error);
+      context.log('error: ', tError);
       context.done();
     } else {
       context.log('successfully connected to the db');

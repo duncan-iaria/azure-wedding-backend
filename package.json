@@ -4,7 +4,8 @@
   "description": "Backend API for managing wedding guests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "func host start"
   },
   "repository": {
     "type": "git",
