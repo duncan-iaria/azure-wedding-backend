@@ -1,15 +1,15 @@
-const guests = require("../data/Guests.seed.json");
-const mongodb = require("mongodb");
+const mongodb = require('mongodb');
+const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
   const getAllGuests = tDb => {
     tDb
-      .collection("guests")
+      .collection('guests')
       .find({})
       .toArray((tError, tGuests) => {
         context.res = {
           status: 200,
-          body: tGuests
+          body: tGuests,
         };
         context.done();
       });
@@ -17,16 +17,19 @@ module.exports = function(context, req) {
 
   const onDbConnect = (tError, tClient) => {
     if (tError) {
-      context.log("error: ", error);
+      context.log('error: ', tError);
       context.done();
     } else {
-      context.log("successfully connected to the db");
-      const db = tClient.db(process.env.DB_NAME);
+      context.log('successfully connected to the db');
+      const db = tClient.db(DB_NAME);
       getAllGuests(db);
     }
   };
 
-  context.log("All Guests endpoint was hit");
-
-  mongodb.MongoClient.connect(process.env.DB_URI, onDbConnect);
+  context.log('All Guests endpoint was hit');
+  mongodb.MongoClient.connect(
+    DB_URI,
+    { useNewUrlParser: true },
+    onDbConnect
+  );
 };

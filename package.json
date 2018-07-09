@@ -4,7 +4,10 @@
   "description": "Backend API for managing wedding guests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "func host start",
+    "clear-guests": "db.guests.remove({}) | sudo mongo dandrhi_test_db",
+    "seed": "mongoimport --db dandrhi_test_db --collection guests --file data/Guests.seed.json --jsonArray"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,11 @@
   "homepage": "https://github.com/duncan-iaria/azure-wedding-backend#readme",
   "dependencies": {
     "mongodb": "^3.1.0-beta4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "printWidth": 120
   }
 }

@@ -5,3 +5,7 @@
 NOTES: 
 sample like query
 db.guests.find({where: displayName = /je/}) //like jenny (like je)
+db.getCollection('guests').find({names: {$regex: /er/i}})
+
+//or is an array of terms (so split on space);
+db.getCollection('guests').find( {$or: [ { names: /er/}, { names: /Cassa/}, { names: /Triss/ } ] })
