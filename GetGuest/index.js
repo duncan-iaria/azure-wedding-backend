@@ -6,6 +6,9 @@ module.exports = function(context, req) {
   let tempQuery = '';
   let database;
 
+  context.log('\n\n db_uri:', DB_URI);
+  context.log('\n\n db_name:', DB_NAME);
+
   const init = () => {
     if (req.query.guestSearch || (req.body && req.body.guestSearch)) {
       tempQuery = req.query.guestSearch || req.body.guestSearch;
