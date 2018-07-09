@@ -48,7 +48,6 @@ module.exports = function(context, req) {
         }
       });
 
-      tempQuery = new RegExp(tempQuery, 'i');
       tDb
         .collection('guests')
         .find({ names: { $all: multiSearch } })
@@ -71,6 +70,7 @@ module.exports = function(context, req) {
     } else {
       context.log('successfully connected to the db');
       const db = tClient.db(DB_NAME);
+      // context.log('\ndb:\n', db, '\n');
       getGuest(db);
     }
   };

@@ -17,7 +17,7 @@ module.exports = function(context, req) {
 
   const onDbConnect = (tError, tClient) => {
     if (tError) {
-      context.log('error: ', error);
+      context.log('error: ', tError);
       context.done();
     } else {
       context.log('successfully connected to the db');
@@ -29,6 +29,7 @@ module.exports = function(context, req) {
   context.log('All Guests endpoint was hit');
   mongodb.MongoClient.connect(
     DB_URI,
+    { useNewUrlParser: true },
     onDbConnect
   );
 };
