@@ -5,7 +5,8 @@
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
-    "attendingGuestCount": 0,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
     "maxGuestCount": 2,
     "emailAddress": null
   },
@@ -15,7 +16,8 @@
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
-    "attendingGuestCount": 0,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
     "maxGuestCount": 2,
     "emailAddress": null
   },
@@ -25,7 +27,8 @@
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
-    "attendingGuestCount": 0,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
     "maxGuestCount": 1,
     "emailAddress": null
   },
@@ -35,8 +38,64 @@
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
-    "attendingGuestCount": 0,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
     "maxGuestCount": 1,
+    "emailAddress": null
+  },
+  {
+    "displayName": "Graham Holden, Esq",
+    "names": ["graham", "graham", "esquire", "gg", "grandpa graham", "holden"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
+    "maxGuestCount": 1,
+    "emailAddress": null
+  },
+  {
+    "displayName": "Madison Holden",
+    "names": ["madison", "maddy", "holden"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
+    "maxGuestCount": 1,
+    "emailAddress": null
+  },
+  {
+    "displayName": "Austin Iaria",
+    "names": ["austin", "trond", "austy", "iaria"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
+    "maxGuestCount": 1,
+    "emailAddress": null
+  },
+  {
+    "displayName": "Amanda Mumford & Kimmie VanWyck",
+    "names": ["kimmie", "amanda", "van wyck", "vanwyck", "mumford", "momford", "mandy"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
+    "maxGuestCount": 2,
+    "emailAddress": null
+  },
+  {
+    "displayName": "Kelsie & Robert Tibbetts",
+    "names": ["kelsie", "rob", "tibbetts", "robert", "van wyck", "vanwyck"],
+    "isWeddingRsvp": false,
+    "isWelcomeRsvp": false,
+    "isResponded": false,
+    "attendingWeddingGuestCount": 0,
+    "attendingWelcomeGuestCount": 0,
+    "maxGuestCount": 2,
     "emailAddress": null
   }
 ]

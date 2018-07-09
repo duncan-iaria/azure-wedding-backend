@@ -1,4 +1,5 @@
 const mongodb = require('mongodb');
+const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
   context.log('Get Guest endpoint hit');
@@ -13,7 +14,7 @@ module.exports = function(context, req) {
         sendResponse([], 'Please pass a valid search query', 400);
       } else {
         mongodb.MongoClient.connect(
-          process.env.DB_URI,
+          DB_URI,
           { useNewUrlParser: true },
           onDbConnect
         );
@@ -69,7 +70,7 @@ module.exports = function(context, req) {
       context.done();
     } else {
       context.log('successfully connected to the db');
-      const db = tClient.db(process.env.DB_NAME);
+      const db = tClient.db(DB_NAME);
       getGuest(db);
     }
   };

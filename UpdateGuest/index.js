@@ -1,5 +1,6 @@
 const mongodb = require('mongodb');
 const ObjectId = mongodb.ObjectId;
+const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
   context.log('Update Guest Endpoint was hit');
@@ -10,7 +11,7 @@ module.exports = function(context, req) {
       tempGuestToUpdate = req.body;
 
       mongodb.MongoClient.connect(
-        process.env.DB_URI,
+        DB_URI,
         { useNewUrlParser: true },
         onDbConnect
       );
@@ -25,18 +26,13 @@ module.exports = function(context, req) {
       sendResponse([], tError, 400);
     } else {
       context.log('successfully connected to the db');
-      const db = tClient.db(process.env.DB_NAME);
+      const db = tClient.db(DB_NAME);
       updateGuest(db);
     }
   };
 
   const updateGuest = async tDatabase => {
-    const updateOption = {
-      isWeddingRsvp: tempGuestToUpdate.isWeddingRsvp,
-      isWelcomeRsvp: tempGuestToUpdate.isWelcomeRsvp,
-      attendingGuestCount: tempGuestToUpdate.attendingGuestCount,
-      isResponded: true,
-    };
+    const updateOption = createUpdatedGuest();
 
     try {
       const tempResponse = await tDatabase
@@ -51,6 +47,28 @@ module.exports = function(context, req) {
     } catch (tError) {
       sendResponse([], tError, 400);
     }
+  };
+
+  const createUpdatedGuest = () => {
+    //SOLO GUEST
+    if (tempGuestToUpdate.maxGuestCount === 1) {
+      return {
+        isWeddingRsvp: tempGuestToUpdate.isWeddingRsvp,
+        isWelcomeRsvp: tempGuestToUpdate.isWelcomeRsvp,
+        attendingWeddingGuestCount: tempGuestToUpdate.isWeddingRsvp ? 1 : 0,
+        attendingWelcomeGuestCount: tempGuestToUpdate.isWelcomeRsvp ? 1 : 0,
+        isResponded: true,
+      };
+    }
+
+    //GUEST GROUP
+    return {
+      isWeddingRsvp: tempGuestToUpdate.isWeddingRsvp,
+      isWelcomeRsvp: tempGuestToUpdate.isWelcomeRsvp,
+      attendingWeddingGuestCount: tempGuestToUpdate.attendingWeddingGuestCount,
+      attendingWelcomeGuestCount: tempGuestToUpdate.attendingWelcomeGuestCount,
+      isResponded: true,
+    };
   };
 
   const sendResponse = (tData, tError, tStatus) => {

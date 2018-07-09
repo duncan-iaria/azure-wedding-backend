@@ -1,4 +1,5 @@
 const mongodb = require('mongodb');
+const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
   const getAllGuests = tDb => {
@@ -20,11 +21,14 @@ module.exports = function(context, req) {
       context.done();
     } else {
       context.log('successfully connected to the db');
-      const db = tClient.db(process.env.DB_NAME);
+      const db = tClient.db(DB_NAME);
       getAllGuests(db);
     }
   };
 
   context.log('All Guests endpoint was hit');
-  mongodb.MongoClient.connect(process.env.DB_URI, onDbConnect);
+  mongodb.MongoClient.connect(
+    DB_URI,
+    onDbConnect
+  );
 };
