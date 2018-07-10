@@ -1,4 +1,4 @@
-const mongodb = require('mongodb');
+// const mongodb = require('mongodb');
 const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
