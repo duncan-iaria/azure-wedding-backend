@@ -11,9 +11,13 @@ module.exports = function(context, req) {
       body: 'Hello ' + (req.query.name || req.body.name),
     };
   } else {
+    let tempTest = false;
+    if (typeof DB_URI === 'string') {
+      tempTest = true;
+    }
     context.res = {
       status: 400,
-      body: `Please pass a name on the query string or in the request body ${DB_NAME}`,
+      body: `Please pass a name on the query string or in the request body ${DB_NAME}, ${tempTest}`,
     };
   }
   context.done();
