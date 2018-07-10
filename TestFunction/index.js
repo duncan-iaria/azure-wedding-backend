@@ -13,6 +13,7 @@ module.exports = function(context, req) {
   } else {
     let tempTest = false;
     let tempVersion = process.version;
+    context.log('please linux help me');
     if (typeof DB_URI === 'string') {
       tempTest = true;
     }
