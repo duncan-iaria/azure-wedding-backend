@@ -12,12 +12,13 @@ module.exports = function(context, req) {
     };
   } else {
     let tempTest = false;
+    let tempVersion = process.version;
     if (typeof DB_URI === 'string') {
       tempTest = true;
     }
     context.res = {
       status: 400,
-      body: `Please pass a name on the query string or in the request body ${DB_NAME}, ${tempTest}`
+      body: `Please pass a name on the query string or in the request body ${DB_NAME}, ${tempTest}, ${tempVersion}`
     };
   }
   context.done();
