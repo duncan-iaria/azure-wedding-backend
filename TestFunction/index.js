@@ -1,4 +1,4 @@
-const mongodb = require('mongodb');
+// const mongodb = require('mongodb');
 const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
@@ -12,9 +12,9 @@ module.exports = function(context, req) {
     };
   } else {
     let tempTest = false;
-    // if (typeof DB_URI === 'string') {
-    //   tempTest = true;
-    // }
+    if (typeof DB_URI === 'string') {
+      tempTest = true;
+    }
     context.res = {
       status: 400,
       body: `Please pass a name on the query string or in the request body ${DB_NAME}, ${tempTest}`
