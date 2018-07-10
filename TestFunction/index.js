@@ -1,7 +1,9 @@
+const mongodb = require('mongodb');
 const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
 
 module.exports = function(context, req) {
   context.log('Test function received a request');
+  context.log('mongo db ?: ', mongodb);
 
   if (req.query.name || (req.body && req.body.name)) {
     context.res = {
