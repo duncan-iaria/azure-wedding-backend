@@ -27,9 +27,15 @@ module.exports = function(context, req) {
   };
 
   context.log('All Guests endpoint was hit');
-  mongodb.MongoClient.connect(
-    DB_URI,
-    { useNewUrlParser: true },
-    onDbConnect
-  );
+
+  try {
+    mongodb.MongoClient.connect(
+      DB_URI,
+      { useNewUrlParser: true },
+      onDbConnect
+    );
+  } catch (error) {
+    context.log('error connecting to db: ', error);
+    context.done();
+  }
 };
