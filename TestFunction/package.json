@@ -1,0 +1,6 @@
+{
+  "name": "test-function",
+  "dependencies": {
+    "mongodb": "^3.1.0-beta4"
+  }
+}
