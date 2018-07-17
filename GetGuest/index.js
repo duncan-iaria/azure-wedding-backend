@@ -1,13 +1,10 @@
 const mongodb = require('mongodb');
 const [DB_URI, DB_NAME] = require('../Utils').getConfigOptions();
+let client = null;
 
 module.exports = function(context, req) {
   context.log('Get Guest endpoint hit');
   let tempQuery = '';
-  let database;
-
-  context.log('\n\n db_uri:', DB_URI);
-  context.log('\n\n db_name:', DB_NAME);
 
   const init = () => {
     if (req.query.guestSearch || (req.body && req.body.guestSearch)) {
@@ -16,14 +13,22 @@ module.exports = function(context, req) {
       if (tempQuery.includes('request')) {
         sendResponse([], 'Please pass a valid search query', 400);
       } else {
-        mongodb.MongoClient.connect(
-          DB_URI,
-          { useNewUrlParser: true },
-          onDbConnect
-        );
+        createDatabaseConnection();
       }
     } else {
       sendResponse([], 'Please pass a valid search query', 400);
+    }
+  };
+
+  const createDatabaseConnection = () => {
+    if (client) {
+      onDbConnect(null, client);
+    } else {
+      mongodb.MongoClient.connect(
+        DB_URI,
+        { useNewUrlParser: true },
+        onDbConnect
+      );
     }
   };
 
@@ -31,12 +36,12 @@ module.exports = function(context, req) {
     context.res = {
       status: tStatus || 200,
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: {
         data: tData,
-        error: tError || null,
-      },
+        error: tError || null
+      }
     };
     context.done();
   };
@@ -71,9 +76,8 @@ module.exports = function(context, req) {
       context.log('error: ', tError);
       context.done();
     } else {
-      context.log('successfully connected to the db');
+      client = tClient;
       const db = tClient.db(DB_NAME);
-      // context.log('\ndb:\n', db, '\n');
       getGuest(db);
     }
   };
