@@ -2,6 +2,7 @@
   {
     "displayName": "Graham Holden, Esq",
     "names": ["graham", "graham", "esquire", "gg", "grandpa graham", "holden"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -13,6 +14,7 @@
   {
     "displayName": "Madison Holden",
     "names": ["madison", "maddy", "holden"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -24,6 +26,7 @@
   {
     "displayName": "Suzanne Walker",
     "names": ["suzanne", "walker"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -35,17 +38,19 @@
   {
     "displayName": "Megan Walker",
     "names": ["megan", "walker"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
     "attendingWeddingGuestCount": 0,
     "attendingWelcomeGuestCount": 0,
-    "maxGuestCount": 2,
+    "maxGuestCount": 1,
     "emailAddress": null
   },
   {
     "displayName": "Carol Culverhouse",
     "names": ["carol", "culverhouse"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -57,6 +62,7 @@
   {
     "displayName": "Mark Izard & Janet Humphreys",
     "names": ["mark", "janet", "izard", "humphreys"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -68,6 +74,7 @@
   {
     "displayName": "Jericho & Nancy Jones",
     "names": ["jericho", "nancy", "humphreys", "jones"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -79,6 +86,7 @@
   {
     "displayName": "David Humphreys",
     "names": ["david", "humphreys"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -90,6 +98,7 @@
   {
     "displayName": "Jenny & Ben Cunningham",
     "names": ["jenny", "ben", "cunningham", "andrews"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -101,6 +110,7 @@
   {
     "displayName": "Nick & Lindsey Fiacco",
     "names": ["nick", "lindsey", "fiacco", "boxy", "boxie"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -112,6 +122,7 @@
   {
     "displayName": "Qasim & Shahnaz Zaidi",
     "names": ["qasim", "shahnaz", "rahman"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -123,6 +134,7 @@
   {
     "displayName": "Mary & Zach Nesbit",
     "names": ["mary", "hotz", "zach", "nesbit"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -134,6 +146,7 @@
   {
     "displayName": "Sarah Jarrell & Jon Blaloch",
     "names": ["sarah", "jarrell", "jon", "blaloch"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -145,6 +158,7 @@
   {
     "displayName": "Andrea & Josh Schmidt",
     "names": ["andrea", "nordstrom", "josh", "schmidt", "joshua"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -156,6 +170,7 @@
   {
     "displayName": "Jess Waller & Phil Lewicki",
     "names": ["jess", "waller", "phil", "lewicki"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -167,6 +182,7 @@
   {
     "displayName": "Julianne Davis",
     "names": ["juli", "julianne", "julie", "davis"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -178,6 +194,7 @@
   {
     "displayName": "Rebecca Hickom",
     "names": ["rebecca", "hickom", "becca"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -189,6 +206,7 @@
   {
     "displayName": "Nicole Rotti & Michael Grandone",
     "names": ["nicole", "rotti", "michael", "grandone"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -200,6 +218,7 @@
   {
     "displayName": "Brittany Gregory",
     "names": ["brett", "brettany", "brittany", "gregory"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -211,6 +230,7 @@
   {
     "displayName": "Jim Zhong & Jessie Chai",
     "names": ["jim", "zhong", "jessie", "chai", "canada"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -222,6 +242,7 @@
   {
     "displayName": "Haider & Nida Ali",
     "names": ["haider", "nida", "ali", "street"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -233,6 +254,7 @@
   {
     "displayName": "Zohra Prasla",
     "names": ["zohra", "prasla"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -244,6 +266,7 @@
   {
     "displayName": "Abi Kukoyi & Sumo Mulbah",
     "names": ["abi", "kukoyi", "sumo", "mulbah"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -255,6 +278,7 @@
   {
     "displayName": "Paris & Thanushi Wynn",
     "names": ["paris", "thanushi", "wynn", "marvel"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -266,6 +290,7 @@
   {
     "displayName": "Priya Rajaram",
     "names": ["priya", "rajaram"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -277,6 +302,7 @@
   {
     "displayName": "Tom and Elizabeth Cole",
     "names": ["tom", "liz", "elizabeth", "cole"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -288,6 +314,7 @@
   {
     "displayName": "Taylor Lincoln and Josh Bennett",
     "names": ["taylor", "lincoln", "josh", "bennett"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -299,6 +326,7 @@
   {
     "displayName": "Thuy Nguyen and Nolan Shutler",
     "names": ["thuy", "nguyen", "nolan", "shutler"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -310,6 +338,7 @@
   {
     "displayName": "Maureen Kimani",
     "names": ["maureen", "kimani"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -321,6 +350,7 @@
   {
     "displayName": "Tali Wojnowich",
     "names": ["tali", "Wojnowich"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -332,6 +362,7 @@
   {
     "displayName": "Mona Shaban",
     "names": ["mona", "shaban"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -343,6 +374,7 @@
   {
     "displayName": "Sita Bushan",
     "names": ["sita", "bushan", "mama sita"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -354,6 +386,7 @@
   {
     "displayName": "Hao & Holly Liu",
     "names": ["hao", "holly", "liu"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -365,6 +398,7 @@
   {
     "displayName": "Megan Powers",
     "names": ["megan", "powers"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -376,6 +410,7 @@
   {
     "displayName": "Amanda Mumford & Kimmie VanWyck",
     "names": ["kimmie", "amanda", "van wyck", "vanwyck", "mumford", "momford", "mandy"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -387,6 +422,7 @@
   {
     "displayName": "Kelsie & Robert Tibbetts",
     "names": ["kelsie", "rob", "tibbetts", "robert", "van wyck", "vanwyck"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -398,6 +434,7 @@
   {
     "displayName": "Clay VanWyck",
     "names": ["clay", "barclay", "vanwyck", "van wyck", "herr", "wiggler"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -409,6 +446,7 @@
   {
     "displayName": "John & Ann Iaria",
     "names": ["john", "ann", "iaria", "walrus", "man", "walrusman"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -420,6 +458,7 @@
   {
     "displayName": "Austin Iaria",
     "names": ["austin", "trond", "austy", "iaria"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -431,6 +470,7 @@
   {
     "displayName": "Lee & Dani Evans",
     "names": ["lee", "dani", "evans", "norblane"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -442,6 +482,7 @@
   {
     "displayName": "Joey & Chelsea Libera",
     "names": ["joey", "chelsea", "libera"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -453,6 +494,7 @@
   {
     "displayName": "Nick & Emily Connolly",
     "names": ["nick", "connolly", "emily", "sense", "olas"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -464,6 +506,7 @@
   {
     "displayName": "Zach & Shelby Taylor",
     "names": ["zach", "xaq", "taylor", "shelby"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -475,6 +518,7 @@
   {
     "displayName": "Duncan & Phoebe Yewell",
     "names": ["duncan", "phoebe", "yewell", "scronch"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -486,6 +530,7 @@
   {
     "displayName": "Eric Monachello & Cassandra Trissler",
     "names": ["eric", "monachello", "cassandra", "trissler", "natchbox", "sand"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -497,6 +542,7 @@
   {
     "displayName": "Garrett La Valley & JoEl James",
     "names": ["garrett", "la valley", "lavalley", "joel", "james", "sheepocide"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -508,6 +554,7 @@
   {
     "displayName": "Ryan and Rachael O'Donnell",
     "names": ["ryan", "rachael", "odonnell", "o'donnell"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -519,6 +566,7 @@
   {
     "displayName": "Steven Frady and Ari Guy",
     "names": ["steven", "steve", "ari", "guy", "sultan", "zabu"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -530,6 +578,7 @@
   {
     "displayName": "Nick Perlman & Adri Ramdeane",
     "names": ["nick", "perlman", "adri", "ramdeane"],
+    "isWelcomeInvite": true,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -541,6 +590,7 @@
   {
     "displayName": "Devin Smith",
     "names": ["devin", "smith"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -552,6 +602,7 @@
   {
     "displayName": "Daniel Wilson",
     "names": ["daniel", "wilson", "yonkeys"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -563,6 +614,7 @@
   {
     "displayName": "Brian Kucinski",
     "names": ["brian", "kucinski"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -574,6 +626,7 @@
   {
     "displayName": "Greg Rettig",
     "names": ["greg", "rettig", "colleen"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -585,6 +638,7 @@
   {
     "displayName": "Jeremiah Stuard",
     "names": ["jeremiah", "stuard"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -596,6 +650,7 @@
   {
     "displayName": "Nick Paparazzo",
     "names": ["nick", "paparazzo"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
@@ -607,6 +662,7 @@
   {
     "displayName": "Chris Hassebrook",
     "names": ["chris", "hassebrook", "nadia", "aly", "shitlord"],
+    "isWelcomeInvite": false,
     "isWeddingRsvp": false,
     "isWelcomeRsvp": false,
     "isResponded": false,
