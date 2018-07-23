@@ -53,7 +53,7 @@ module.exports = function(context, req) {
         );
 
       //create a log metric for tracking
-      // context.log.metric('Guest Update', updateOption.displayName, updateOption.isWeddingRsvp);
+      // context.log.metric('Guest Update', updateOption.displayName);
 
       sendResponse(tempResponse, null, 200);
     } catch (tError) {
