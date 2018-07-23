@@ -24,6 +24,7 @@ module.exports = function(context, req) {
     if (client) {
       onDbConnect(null, client);
     } else {
+      context.log('trying');
       mongodb.MongoClient.connect(
         DB_URI,
         { useNewUrlParser: true },
@@ -74,7 +75,7 @@ module.exports = function(context, req) {
   const onDbConnect = (tError, tClient) => {
     if (tError) {
       context.log('error: ', tError);
-      context.done();
+      sendResponse([], tError, 502);
     } else {
       client = tClient;
       const db = tClient.db(DB_NAME);
