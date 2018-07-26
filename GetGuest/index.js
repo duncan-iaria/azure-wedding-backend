@@ -74,7 +74,7 @@ module.exports = function(context, req) {
   const onDbConnect = (tError, tClient) => {
     if (tError) {
       context.log('error: ', tError);
-      context.done();
+      sendResponse([], tError, 502);
     } else {
       client = tClient;
       const db = tClient.db(DB_NAME);
