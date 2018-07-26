@@ -24,7 +24,6 @@ module.exports = function(context, req) {
     if (client) {
       onDbConnect(null, client);
     } else {
-      context.log('trying');
       mongodb.MongoClient.connect(
         DB_URI,
         { useNewUrlParser: true },
