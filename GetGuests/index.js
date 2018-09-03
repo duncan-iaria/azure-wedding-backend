@@ -24,7 +24,7 @@ module.exports = function(context, req) {
         status: 500,
         body: {
           error: tError,
-          data: null
+          data: []
         }
       };
       context.log('error: ', tError);
