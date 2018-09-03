@@ -9,7 +9,10 @@ module.exports = function(context, req) {
       .toArray((tError, tGuests) => {
         context.res = {
           status: 200,
-          body: tGuests,
+          body: {
+            error: tError,
+            data: tGuests
+          }
         };
         context.done();
       });
@@ -17,6 +20,13 @@ module.exports = function(context, req) {
 
   const onDbConnect = (tError, tClient) => {
     if (tError) {
+      context.res = {
+        status: 500,
+        body: {
+          error: tError,
+          data: null
+        }
+      };
       context.log('error: ', tError);
       context.done();
     } else {
