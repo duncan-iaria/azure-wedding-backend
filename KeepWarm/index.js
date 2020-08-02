@@ -1,4 +1,4 @@
-module.exports = function(context, healthCheck) {
+module.exports = function (context, healthCheck) {
   var timeStamp = new Date().toISOString();
 
   if (healthCheck.isPastDue) {

@@ -33,6 +33,24 @@
           "languageWorkers:node:arguments": "--inspect=5858"
         }
       }
+    },
+    {
+      "type": "func",
+      "command": "host start",
+      "problemMatcher": "$func-watch",
+      "isBackground": true,
+      "dependsOn": "npm install"
+    },
+    {
+      "type": "shell",
+      "label": "npm install",
+      "command": "npm install"
+    },
+    {
+      "type": "shell",
+      "label": "npm prune",
+      "command": "npm prune --production",
+      "problemMatcher": []
     }
   ]
 }

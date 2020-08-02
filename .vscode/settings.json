@@ -1,6 +1,10 @@
 {
-  "azureFunctions.projectRuntime": "beta",
+  "azureFunctions.projectRuntime": "~3",
   "azureFunctions.projectLanguage": "JavaScript",
   "azureFunctions.templateFilter": "Verified",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "azureFunctions.deploySubpath": ".",
+  "azureFunctions.postDeployTask": "npm install",
+  "debug.internalConsoleOptions": "neverOpen",
+  "azureFunctions.preDeployTask": "npm prune"
 }
